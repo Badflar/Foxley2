@@ -4,7 +4,7 @@ const DatabaseHandler = require("../../handlers/database");
 module.exports = async (bot, message) => {
     if(message.author.bot || message.channel.type === "dm") return;
 
-    //DatabaseHandler.UpdateUserLevel(message);
+    DatabaseHandler.UpdateUserLevel(message);
 
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();

@@ -1,8 +1,8 @@
-const { steamkey } = require("../../config.js")
+const { steamkey } = require("../../config.json")
 const fetch = require("node-fetch")
 const { stripIndents } = require("common-tags");
 
-module.exports() = {
+module.exports = {
     config: {
         name: "steamuser",
         aliases: ["steamsearch", "steam"],
