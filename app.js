@@ -23,7 +23,8 @@ bot.on('ready', async () => {
         `Fox videos`,
         `Yiff maybe...`,
         `Fox gameplay`,
-        `Minecraft Fox Epic Compilation`
+        `Minecraft Fox Epic Compilation`,
+        'Now on AWS and GitHub!'
     ];
 
     setInterval(function() {
