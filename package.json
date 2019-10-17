@@ -12,6 +12,7 @@
     "discord.js": "^11.5.1",
     "discord.js-commando": "^0.10.0",
     "fs": "0.0.1-security",
-    "git-auto-pull": "^1.0.9"
+    "git-auto-pull": "^1.0.9",
+    "superagent": "^5.1.0"
   }
 }
