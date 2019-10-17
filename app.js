@@ -14,11 +14,10 @@ bot.on('ready', async () => {
     
     let statuses = [
         `Fox videos`,
-        `Yiff maybe...`,
         `Fox gameplay`,
         `Minecraft Fox Epic Compilation`,
         'Now on AWS and GitHub!',
-        'Skree!'
+        'Skree!',
     ];
 
     setInterval(function() {
