@@ -17,7 +17,7 @@ bot.on('ready', async () => {
         `Fox gameplay`,
         `Minecraft Fox Epic Compilation`,
         'Now on AWS and GitHub!',
-        'Skree!!',
+        'Skree!',
     ];
 
     setInterval(function() {
