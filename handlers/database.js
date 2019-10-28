@@ -31,7 +31,7 @@ module.exports = {
                 connection.close();
             });
 
-                request.addParameter('UserId', YPES.NVaTrChar, user.id);
+                request.addParameter('UserId', TYPES.NVarChar, user.id);
                 request.addParameter('Username', TYPES.NVarChar, user.username);
                 request.addParameter('Discrim', TYPES.Int, user.discriminator);
 
@@ -39,10 +39,10 @@ module.exports = {
         });
     },
 
-    InsertServerByMember: function(user) {
+    UpdateServerMessageCount: function(message) {
         var connection = new Connection(dbConfig);
         connection.on('connect', function (err) {
-            var request = new Request('usp_ins_Server',
+            var request = new Request('usp_upd_ServerMessage',
             function(err) {
                 if (err) {
                     console.log(err);
@@ -50,7 +50,7 @@ module.exports = {
                 connection.close();
             });
 
-            var guild = user.guild;            
+            let guild = message.guild;
 
             request.addParameter('ServerId', TYPES.NVarChar, guild.id);
             request.addParameter('ServerName', TYPES.NVarChar, guild.name);
