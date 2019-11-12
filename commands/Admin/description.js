@@ -11,9 +11,8 @@ module.exports = {
         accessableby: "SERVER OWNER"
     },
     run: async (bot, message, args) => {
-        DatabaseHanlder.InsertBotSuggestion(message, args);
         if (message.author.id != message.guild.owner.id) return message.channel.send("This command is only available for the server owner!")
-        DatabaseHanlder.InsertServerDescription(message, args)
+        DatabaseHanlder.UpdateServerDescription(message, args)
         message.channel.send(`I have set your description to "${args.join(" ")}" \n Thank you!`);
     }
 }

@@ -39,7 +39,7 @@ module.exports = {
         });
     },
 
-    InsertServerDescription: function(message, args) {
+    UpdateServerDescription: function(message, args) {
         var connection = new Connection(dbConfig);
         connection.on('connect', function(err) {
             var request = new Request('usp_upd_ServerDescription',
