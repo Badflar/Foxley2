@@ -39,6 +39,24 @@ module.exports = {
         });
     },
 
+    InsertServerDescription: function(message, args) {
+        var connection = new Connection(dbConfig);
+        connection.on('connect', function(err) {
+            var request = new Request('usp_upd_ServerDescription',
+            function(err) {
+                if (err) {
+                    console.log(err);
+                }
+                connection.close();
+            });
+
+            request.addParameter('ServerId', TYPES.NVarChar, message.guild.id);
+            request.addParameter('Description', TYPES.NVarChar, args.join(" "));
+
+            connection.callProcedure(request);
+        })
+    },
+
     UpdateServerMessageCount: function(message) {
         var connection = new Connection(dbConfig);
         connection.on('connect', function (err) {
