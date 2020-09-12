@@ -13,7 +13,7 @@
     "discord.js-commando": "^0.10.0",
     "fs": "0.0.1-security",
     "git-auto-pull": "^1.0.9",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "superagent": "^5.1.0",
     "tedious": "^6.4.0"
   }
